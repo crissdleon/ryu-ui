@@ -1,8 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 
 let list = ['router-1','router-2','router-3','router-4']
 function ListRouter(){
-  const [router,setRouter] = useState(0)
 
     return (
 	  <div className="max-w-sm p-1 rounded overflow-hidden shadow-lg">
