@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import {useTransition, animated} from 'react-spring'
-import {Link} from 'react-router-dom'
-
+//TODO: router 
+//
 function Navigation(){
   const [showMenu,setShowMenu] = useState(false)
   let menu
@@ -28,6 +28,7 @@ function Navigation(){
 	  </div>
 	  menuMask = 
 	  <div
+
 		onClick={()=>setShowMenu(false)}
 	>
 	  </div>
@@ -65,8 +66,7 @@ function Navigation(){
 		The menu
 		</span>
 		  <ul>
-			<li onClick ={()=>setShowMenu(false)}><Link to="/">home</Link> </li>
-			<li onClick ={()=>setShowMenu(false)}><Link to="/about">about</Link> </li>
+			<li>Home</li>
 		  </ul>
 		</animated.div>
 	  ) 

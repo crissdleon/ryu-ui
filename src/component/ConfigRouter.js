@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RouterConfig(){
+function RouterConfig({currentRouter}){
     return ( 
 	  <div class="max-w-sm rounded overflow-hidden shadow-lg">
 
