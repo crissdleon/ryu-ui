@@ -65,8 +65,8 @@ function Navigation(){
 		The menu
 		</span>
 		  <ul>
-			<li onClick ={()=>setShowMenu(false)}><Link to="/">home</Link> </li>
-			<li onClick ={()=>setShowMenu(false)}><Link to="/about">about</Link> </li>
+			{/* <li onClick ={()=>setShowMenu(false)}><Link to="/">home</Link> </li> */}
+			{/* <li onClick ={()=>setShowMenu(false)}><Link to="/about">about</Link> </li> */}
 		  </ul>
 		</animated.div>
 	  ) 

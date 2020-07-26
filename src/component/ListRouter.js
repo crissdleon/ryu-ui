@@ -1,12 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 
-
+//test
 const ListRouter =  ({currentRouter})=> {	
   const [listRouter,setListRouter] = useState([{_id:'232323'}]);
  
   useEffect(()=>{
-	axios.get('http://localhost:8080/router/all')
+	axios.get('http://localhost:8081/router/all')
   .then(response => {
 	setListRouter(response.data)
    })

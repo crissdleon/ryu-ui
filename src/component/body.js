@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import ListRouter from './ListRouter'
 import RouterConfig from './ConfigRouter'
 import ListRouterConfig from './ListRouterConfig'
+import DeleteConfig from './DeleteConfig'
 
 function Body(){
 const [currentRouter,setCurrentRouter] = useState('');
@@ -27,8 +28,7 @@ return (
 
 		<RouterConfig currentRouter= {currentRouter} />
 		:currentConfig==='deleteIp'?
-		  <h1>deleteip </h1>
-
+		<DeleteConfig currentRouter = {currentRouter}/>
 	//	<RouterConfig currentRouter= {currentRouter} />
 		:currentConfig ==='addRoute'?
 		<h1>addroute</h1>
