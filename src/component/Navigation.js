@@ -2,12 +2,12 @@ import React, {useState} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import {useTransition, animated} from 'react-spring'
-import {Link} from 'react-router-dom'
 
 function Navigation(){
   const [showMenu,setShowMenu] = useState(false)
   let menu
   let menuMask 
+ console.log(menu,menuMask) 
 //mask 	className="bg-black-t-50  fixed top-0 left-0 w-full h-full z-50"
     const maskTransitions = useTransition(showMenu, null, {
         from: { position: 'absolute', opacity: 0 },
