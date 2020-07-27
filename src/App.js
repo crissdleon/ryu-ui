@@ -17,11 +17,9 @@ function App() {
 	<Body /> 
 	  <Switch>
 		<Route exact path="/">
-			<h1>home</h1>
 		</Route>
 
 		<Route exact path="/about">
-			<h1>about</h1>
 		</ Route>
 		
 

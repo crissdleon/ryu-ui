@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-let list = [{display:'Add IP',value:'addIp'},{display:'Delete IP',value:'deleteIp'},{display:'Add static rute',value:'addRoute'},{display:'Delete static rute',value:'deleteRute'}]
+let list = [{display:'Add IP Address',value:'addIp'},{display:'Delete IP Address',value:'deleteIp'},{display:'Add Route',value:'addRoute'},{display:'Delete Route',value:'deleteRute'}]
 
 function ListRouterConfig({currentConfig}){
 

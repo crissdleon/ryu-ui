@@ -18,7 +18,7 @@ def request(flow):
     if flow.request.method == "OPTIONS":
             flow.response = http.HTTPResponse.make(200, b"", {
                     "Access-Control-Allow-Origin": ALLOW_ORIGIN,
-                    "Access-Control-Allow-Methods": "GET,POST",
+                    "Access-Control-Allow-Methods": "GET,POST,DELETE",
                     "Access-Control-Allow-Headers": ALLOW_HEADERS,
                     "Access-Control-Max-Age": "10"
             })

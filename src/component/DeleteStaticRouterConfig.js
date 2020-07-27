@@ -3,14 +3,14 @@ import axios from "axios";
 
 import {useAlert} from 'react-alert'
 //test
-function DeleteConfig({ currentRouter }) {
+function DeleteStaticRouterConfig({ currentRouter }) {
   const [listAddress, setListAddress] = useState([]);
   const alert = useAlert();
   useEffect(() => {
     axios
       .get(`http://localhost:8081/router/${currentRouter}`)
       .then((response) => {
-        const data = response.data[0].internal_network[0].address;
+        const data = response.data[0].internal_network[0].route;
         if (data !== undefined) setListAddress((_) => data);
       })
       .catch((error) => {
@@ -24,13 +24,13 @@ function DeleteConfig({ currentRouter }) {
   function handleRemove(id) {
     axios
       .delete(`http://localhost:8081/router/${currentRouter}`, {
-        data: { address_id: id },
+        data: { route_id: id },
       })
       .then((response) => {
         if (response.data[0].command_result[0].result === "success") {
 		  alert.success(`Address with id:${id} was deleted`)
           const newAddressList = listAddress.filter(
-            (item) => item.address_id !== id
+            (item) => item.route_id !== id
           );
           setListAddress(newAddressList);
         }
@@ -44,15 +44,15 @@ function DeleteConfig({ currentRouter }) {
 
   return listAddress.length > 0 ? (
     <ul className="max-w-sm p-1 rounded overflow-hidden shadow-lg">
-      <label className="text-purple-600 font-bold">Delete Address</label>
+      <label className="text-purple-600 font-bold">Delete Route</label>
       {listAddress.map((item, index) => (
         <li
-          onClick={() => handleRemove(item.address_id)}
-          key={item.address_id}
+          onClick={() => handleRemove(item.route_id)}
+          key={item.route_id}
           className="p-5 border-2 rounded hover:bg-gray-200"
           style={{ cursor: "pointer" }}
         >
-          {item.address}
+          {item.destination}
 
           <button className="m-1 right-0 bg-blue-500  hover:bg-red-700 text-white font-bold py-1 px-3 border border-blue-700 rounded">
 			Delete
@@ -61,8 +61,8 @@ function DeleteConfig({ currentRouter }) {
       ))}
     </ul>
   ) : (
-    <li>there aren't address to delete</li>
+    <li>there aren't routes to delete</li>
   );
 }
 
-export default DeleteConfig;
+export default DeleteStaticRouterConfig;
