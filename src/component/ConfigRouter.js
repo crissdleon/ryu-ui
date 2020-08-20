@@ -1,18 +1,22 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useAlert } from "react-alert";
-
+import {useAuth} from "../context/auth";
 import axios from "axios";
 
 function RouterConfig({ currentRouter }) {
   const alert = useAlert();
 
   const { register, handleSubmit, errors } = useForm();
-
+  const {authTokens} = useAuth()
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post(`http://localhost:8081/router/${currentRouter}`, data)
+      .post(`http://localhost:8081/router/${currentRouter}`, data,{
+	  
+		headers:{Authorization:JSON.parse(authTokens).token}
+
+	  })
       .then(function (response) {
         if (response.data[0].command_result[0].result === "success") {
           alert.success("Address sended successfull");

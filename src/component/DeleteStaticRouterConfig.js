@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import {useAuth} from "../context/auth"
 import {useAlert} from 'react-alert'
 //test
 function DeleteStaticRouterConfig({ currentRouter }) {
   const [listAddress, setListAddress] = useState([]);
   const alert = useAlert();
+  const {authTokens} = useAuth(); 
+
+  const header = { 
+
+	headers:{
+	Authorization:JSON.parse(authTokens).token
+	}
+  }
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/router/${currentRouter}`)
+      .get(`http://localhost:8081/router/${currentRouter}`,header)
       .then((response) => {
         const data = response.data[0].internal_network[0].route;
         if (data !== undefined) setListAddress((_) => data);
@@ -23,8 +31,8 @@ function DeleteStaticRouterConfig({ currentRouter }) {
   //	const getRouter = (event)=> {currentRouter(event)}
   function handleRemove(id) {
     axios
-      .delete(`http://localhost:8081/router/${currentRouter}`, {
-        data: { route_id: id },
+      .delete(`http://localhost:8081/router/${currentRouter}`,header, {
+		data: { route_id: id },headers:{Authorization:JSON.parse(authTokens).token}
       })
       .then((response) => {
         if (response.data[0].command_result[0].result === "success") {

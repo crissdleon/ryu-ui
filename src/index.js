@@ -18,9 +18,9 @@ const options = {
 
 
 
-const Root = () => (
+const Root = (props) => (
   <AlertProvider template={AlertTemplate} {...options}>
-    <App />
+    <App props={props} />
   </AlertProvider>
 )
 
