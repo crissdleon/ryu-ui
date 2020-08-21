@@ -1,0 +1,561 @@
+16:32:23,126 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+16:33:35,915 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+16:34:47,532 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:34:48,982 paramiko.transport INFO Authentication (password) successful!
+16:34:57,838 root INFO Se cambio la direccion IP a la interfaz FA0/1, Resultado: configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int Fastethernet 0/1
+R1(config-if)#ip address 192.168.10.1 255.255.255.0
+R1(config-if)#end
+R1#
+16:35:20,941 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:35:22,424 paramiko.transport INFO Authentication (password) successful!
+16:35:31,273 root INFO Se cambio la direccion IP a la interfaz FA0/1, Resultado: configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#int Fastethernet 0/1
+R2(config-if)#ip address 192.168.10.1 255.255.255.0
+R2(config-if)#end
+R2#
+16:36:03,243 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:36:04,700 paramiko.transport INFO Authentication (password) successful!
+16:36:12,589 root INFO Se envio una ruta estatica, Resultado: configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip route 0.0.0.0 0.0.0.0 192.168.10.2
+R1(config)#end
+R1#
+16:37:27,833 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:38:08,42 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:38:08,950 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:38:33,632 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:39:19,414 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:39:20,890 paramiko.transport INFO Authentication (password) successful!
+16:39:29,667 root INFO Se Elimino la Direccion IP de la int FA 0/1 :
+16:39:44,356 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:40:19,267 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:40:20,727 paramiko.transport INFO Authentication (password) successful!
+16:40:28,639 root INFO Se envio una ruta estatica, Resultado: configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip route 20.20.20.20 255.255.255.255 192.168.10.2
+R1(config)#end
+R1#
+16:41:00,271 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:41:01,737 paramiko.transport INFO Authentication (password) successful!
+16:41:10,583 root INFO Se cambio la direccion IP a la interfaz FA0/1, Resultado: configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#int Fastethernet 0/1
+R2(config-if)#ip address 192.168.10.1 255.255.255.0
+R2(config-if)#end
+R2#
+16:41:37,317 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:50:11,228 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+16:51:27,50 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+16:51:44,182 paramiko.transport INFO Connected (version 2.0, client Cisco-1.25)
+16:51:45,639 paramiko.transport INFO Authentication (password) successful!
+16:51:54,378 root INFO Se Elimino la Direccion IP de la int FA 0/1 :
+16:57:00,475 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+17:00:36,196 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+17:09:49,246 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+17:10:17,144 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 67, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+17:10:37,931 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+17:10:55,65 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 10.0.0.2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.2:22
+
+
+17:11:56,578 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 88, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+17:12:00,964 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+17:13:08,824 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 10.0.0.2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 67, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.2:22
+
+
+17:13:33,539 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+18:07:58,582 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+18:10:39,271 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 77, in response
+    switch_id = data_response[0]['switch_id']
+KeyError: 0
+18:11:24,492 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+18:11:43,970 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 67, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+18:12:02,603 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+18:12:14,260 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 10.0.0.2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 104, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.2:22
+
+
+18:12:31,998 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 88, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+
+18:12:42,385 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "mitm_cors.py", line 35, in response
+    switch_id = json.loads(flow.response.get_text())[0]['switch_id']
+KeyError: 0
+18:15:54,781 root ERROR Got exception on main handler
+Traceback (most recent call last):
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 915, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "mitm_cors.py", line 48, in response
+    router_list[(int(switch_id))].conexion_SSH()
+  File "/home/cristina/Desktop/traductorSDN/CiscoConf.py", line 15, in conexion_SSH
+    net_connect = ConnectHandler(**self.__dict__)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 298, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 341, in __init__
+    self._open()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 346, in _open
+    self.establish_connection()
+  File "/home/cristina/.local/share/virtualenvs/traductorSDN-mHnl2rqo/lib/python3.6/site-packages/netmiko/base_connection.py", line 937, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 10.0.0.1:22
+
+

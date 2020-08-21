@@ -31,7 +31,7 @@ function DeleteStaticRouterConfig({ currentRouter }) {
   //	const getRouter = (event)=> {currentRouter(event)}
   function handleRemove(id) {
     axios
-      .delete(`http://localhost:8081/router/${currentRouter}`,header, {
+      .delete(`http://localhost:8081/router/${currentRouter}`,{
 		data: { route_id: id },headers:{Authorization:JSON.parse(authTokens).token}
       })
       .then((response) => {
